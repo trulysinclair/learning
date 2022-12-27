@@ -10,11 +10,11 @@ export default function Login() {
             </div>
             <div className='flex flex-col w-full justify pl-5 pt-5 pr-5'>
                 <label htmlFor='email' className='font pb-1'>Email</label>
-                <input className='text-black rounded-md h-8 drop-shadow-md border-gray-300' placeholder='user@email.com'></input>
+                <input className='text-sm text-black rounded-md h-8 drop-shadow-md border-gray-300' placeholder='user@email.com'></input>
             </div>
             <div className='flex flex-col w-full justify pl-5 pt-3 pr-5'>
                 <label htmlFor='password' className='font pb-1'>Password</label>
-                <input type='password' className='text-black rounded-md h-8 drop-shadow-md border-gray-300' placeholder='password'></input>
+                <input type='password' className='text-sm text-black rounded-md h-8 drop-shadow-md border-gray-300' placeholder='password'></input>
             </div>
             <Link href='/test'>
                 <button className=' rounded-md bg-green-600 mt-8 mb-8 w-24 h-8'>Log In</button>        
