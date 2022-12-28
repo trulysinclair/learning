@@ -16,7 +16,7 @@ export default function Login() {
                 <label htmlFor='password' className='font pb-1'>Password</label>
                 <input type='password' className='text-sm text-black rounded-md h-8 drop-shadow-md border-gray-300' placeholder='password'></input>
             </div>
-            <Link href='/test'>
+            <Link href='/platform'>
                 <button className=' rounded-md bg-green-600 mt-8 mb-8 w-24 h-8'>Log In</button>        
             </Link>
         </div>

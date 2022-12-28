@@ -9,8 +9,8 @@ module.exports = {
     extend: {
       colors: {
         'back-black': '#000000',
-        'bottom-black': '#222222',
-        'upper-black': '#333333',
+        'bottom-black': '#111111',
+        'upper-black': '#222222',
       },
     },
   },
