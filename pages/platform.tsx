@@ -7,7 +7,7 @@ import Menu from '../components/menu'
 export default function Platform() {
     return (
         <div className='flex flex-col bg-back-black w-screen h-screen'>
-            <Menu />
+            <Menu name="Your Name"/>
         </div>
     )
 }
