@@ -15,9 +15,9 @@ export default function Menu(props: { name: string }) {
             <div className='flex flex-col w-full h-full'>
                 <ul className='h-full flex flex-col'>
                     <button className='justify-center items-center bg-red-200 h-14 w-full flex flex-row text-white'>
-                        <div className='flex w-6 h-6'>
+                        <span className='mr-2'>
                             <img src='thirteen.svg' className='w-full h-full'></img>
-                        </div>
+                        </span>
                         <h2 className='flex text-xl justify-center text-white'>Dashboard</h2>
                     </button>
                 </ul>
