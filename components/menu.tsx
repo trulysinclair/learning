@@ -18,7 +18,7 @@ export default function Menu(props: { name: string }) {
 		<div className="fixed bg-bottom-black w-60 h-screen">
 			<div className="flex flex-col bg-upper-black p-4 drop-shadow-md w-full  justify-center items-center">
 				<div className="flex flex-col rounded-full h-28 w-28 bg-white justify-center items-center">
-					<img className="w-full p-5" src="vercel.svg" />
+					<Image className="w-full p-5" src="vercel.svg" alt='profile picture' />
 				</div>
 				<h1 className="text-white text-2xl pt-6 font-medium">{props.name}</h1>
 			</div>
