@@ -11,6 +11,7 @@ import Login from "../components/login-card";
 import ImageButton from "../components/image-button";
 
 const music_icon: string = "M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z";
+const pc_icon: string = "M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25";
 
 export default function Menu(props: { name: string }) {
 	return (
@@ -22,23 +23,9 @@ export default function Menu(props: { name: string }) {
 				<h1 className="text-white text-2xl pt-6 font-medium">{props.name}</h1>
 			</div>
 			<div className="h-full flex flex-col">
-				<button className="justify-center items-center bg-gray-500 h-14 w-full flex flex-row text-white relative">
-					<span className="absolute top-0 left-0 bottom-0 flex justify-center items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="pl-5 h-6">
-							<path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-						</svg>
-					</span>
-					<h2 className="flex text-xl justify-center text-white">Dashboard</h2>
-				</button>
-				<button className="justify-center items-center bg-gray-500 h-14 w-full flex flex-row text-white relative">
-					<span className="absolute top-0 left-0 bottom-0 flex justify-center items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="pl-5 h-6">
-  							<path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
-						</svg>
-					</span>
-					<h2 className="flex text-xl justify-center text-white">Rap/Hip Hop</h2>
-				</button>
-				<ImageButton label="Country" data={music_icon} onClick={function() {console.log("It worked")}}/>
+				<ImageButton  label="Dashboard" data={pc_icon} onClick={function() {}}/>
+				<ImageButton label="Rap/HipHop" data={music_icon} onClick={function() {}} />
+				<ImageButton label="Country" data={music_icon} onClick={function() {console.log("It worked")}} />
 			</div>
 		</div>
 	);
