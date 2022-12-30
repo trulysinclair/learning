@@ -1,6 +1,5 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
 import {
 	ReactElement,
 	JSXElementConstructor,
@@ -9,16 +8,15 @@ import {
 	useState,
 } from "react";
 
-export default function ImageButton(props: { data: string, label: string, onClick: () => void}) {
-    const [isActive, setIsActive] = useState(false);
+export default function ImageButton(props: { data: string, label: string, onClick: () => void, tab : any}) {
+	const [toggleState, setToggleState] = useState(1)
 	
-	const handleClick = () => {
-		setIsActive(current => !current);
-		props.onClick();
-	};
+	const toggleTab = (index : any) => {
+		setToggleState(index)
+	}
 
 	return (
-		<button style={{backgroundColor: isActive ? '#444444' : ''}} className="justify-center items-center bg-top-black h-14 w-full flex flex-row text-white relative border-b border-button-border" onClick={handleClick}>
+		<button className={toggleState === props.tab ? "justify-center items-center bg-top-black h-14 w-full flex flex-row text-white relative border-b border-button-border activeTab" : "justify-center items-center bg-top-black h-14 w-full flex flex-row text-white relative border-b border-button-border"} onClick={() => toggleTab(props.tab)}>
 			<span className="absolute top-0 left-0 bottom-0 flex justify-center items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="pl-5 h-6">
 					<path strokeLinecap="round" strokeLinejoin="round" d={props.data}/>
