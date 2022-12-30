@@ -6,6 +6,7 @@ import {
 	JSXElementConstructor,
 	ReactFragment,
 	ReactPortal,
+	useState,
 } from "react";
 import Login from "../components/login-card";
 import ImageButton from "../components/image-button";
@@ -15,6 +16,20 @@ const music_icon: string = "M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l
 const pc_icon: string = "M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25";
 
 export default function Menu(props: { name: string }) {
+	const [toggleState, setToggleState] = useState(1)
+	
+	const toggleTab = (index : any, id: string) => {
+		if (toggleState != index) {
+			const newTab = document.getElementById(id);
+			newTab?.classList.add("activeTab");
+			setToggleState(index);
+		}
+		else {
+			console.log("TAB ALREADY SELECTED");
+			return;
+		}
+	}
+
 	return (
 		<div className="fixed bg-bottom-black w-60 h-screen">
 			<div className="flex flex-col bg-upper-black p-4 drop-shadow-md w-full  justify-center items-center">
@@ -24,9 +39,9 @@ export default function Menu(props: { name: string }) {
 				<h1 className="text-white text-2xl pt-6 font-medium">{props.name}</h1>
 			</div>
 			<div className="h-full flex flex-col">
-				<ImageButton label="Dashboard" data={pc_icon} onClick={function() {}} tab='1'/>
-				<ImageButton label="Rap/HipHop" data={music_icon} onClick={function() {}} tab='2'/>
-				<ImageButton label="Country" data={music_icon} onClick={function() {}} tab='3' />
+				<ImageButton id="dashboard" label="Dashboard" data={pc_icon} onClick={function() {toggleTab(1, "dashboard");}} />
+				<ImageButton id="rap" label="Rap/HipHop" data={music_icon} onClick={function() {toggleTab(2, "rap");}} />
+				<ImageButton id="country" label="Country" data={music_icon} onClick={function() {toggleTab(3, "country");}} />
 			</div>
 		</div>
 	);
